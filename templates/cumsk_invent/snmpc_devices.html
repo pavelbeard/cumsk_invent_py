@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Устройства из SNMPc</title>
+</head>
+<body>
+    {% if list_objects %}
+        <ul>
+            {% for obj in list_objects %}
+                <li><a href="{% url 'devices_invent:snmpc_device' obj.node_id %}">{{ obj.label }}</a> </li>
+            {% endfor  %}
+        </ul>
+    {% else %}
+        <p>No devices available</p>
+    {% endif %} 
+</body>
+</html>

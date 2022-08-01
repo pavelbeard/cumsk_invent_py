@@ -1,0 +1,6 @@
+{% load render_table from django_tables2 %}
+{% if esma_devices %}
+    {% render_table esma_devices %}
+{% else %}
+    <p>Устройства из ЕСМА не найдены</p>
+{% endif %}
